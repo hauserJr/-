@@ -7,7 +7,7 @@
     <style>
         :root {
             --primary-color: #6d5dfc;
-            --bg-color: #f0f2f5;
+            --bg-color: #f8f9fa;
             --text-color: #2d3436;
         }
         body {
@@ -19,83 +19,66 @@
             padding: 40px 20px;
         }
         .container {
-            max-width: 850px;
+            max-width: 800px;
             margin: 0 auto;
             background: #ffffff;
-            padding: 50px;
+            padding: 40px;
             border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
-        h1 {
-            font-size: 2rem;
-            color: var(--primary-color);
-            text-align: center;
-            margin-bottom: 40px;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 20px;
-        }
-        h2 {
-            font-size: 1.4rem;
-            color: #444;
-            margin-top: 35px;
-            border-left: 4px solid var(--primary-color);
-            padding-left: 15px;
-        }
-        p, ul {
-            margin-bottom: 20px;
-            color: #636e72;
-        }
-        li { margin-bottom: 10px; }
-        .contact-box {
-            background-color: #f8f9fa;
+        h1 { color: var(--primary-color); border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        h2 { color: #444; margin-top: 30px; border-left: 4px solid var(--primary-color); padding-left: 12px; }
+        .highlight-box {
+            background-color: #fff9db;
+            border: 1px solid #f59f00;
             padding: 20px;
             border-radius: 8px;
-            margin-top: 40px;
+            margin: 20px 0;
         }
-        .footer {
-            text-align: center;
-            margin-top: 50px;
-            font-size: 0.9rem;
-            color: #b2bec3;
-        }
+        .contact-info { background: #f1f3f5; padding: 15px; border-radius: 8px; }
+        .footer { text-align: center; margin-top: 40px; font-size: 0.85rem; color: #adb5bd; }
     </style>
 </head>
 <body>
 
 <div class="container">
     <h1>「織女日記」隱私權保護政策</h1>
-    
-    <p>歡迎您使用「織女日記」（以下簡稱本服務）。為了確保您的個人隱私及權益獲得保障，我們特此擬定本隱私權政策。當您開始使用本服務，即表示您已閱讀並同意本聲明之內容。</p>
+    <p>本應用程式<strong>「織女日記」</strong>（以下簡稱「本程式」）由開發者 <strong>鄭名宏 (Zheng Ming-hong)</strong>（以下簡稱「我們」）所開發與營運。我們非常重視您的隱私，特此說明我們的資料處理政策。</p>
 
-    <h2>一、個人資料之收集</h2>
-    <p>在本服務的使用過程中，我們可能會收集以下資料：</p>
+    <h2>一、個人資料之收集與利用</h2>
+    <p>我們僅會收集為提供服務所必需的資訊：</p>
     <ul>
-        <li><strong>通訊資訊：</strong> 當您透過 Email 聯繫我們時，我們會保留您的電子郵件地址以進行後續回覆。</li>
-        <li><strong>裝置與技術資訊：</strong> 為了優化硬體控制與軟體效能，系統可能會紀錄您的連線裝置資訊、操作紀錄（如繞線參數設定）及錯誤日誌。</li>
-        <li><strong>Cookie 與紀錄：</strong> 網頁版服務可能會使用 Cookie 來記住您的偏好設定，以提供更流暢的操作體驗。</li>
+        <li><strong>帳號資訊：</strong> 電子郵件地址（用於登入與身分驗證）。</li>
+        <li><strong>裝置資訊：</strong> 包含硬體型號、作業系統版本，用於優化與 ESP32 控制器的連線穩定性。</li>
+        <li><strong>操作紀錄：</strong> 繞線參數、機器設定等使用數據，僅儲存於本地或與您帳號關聯的雲端空間。</li>
     </ul>
 
-    <h2>二、資料之利用目的</h2>
-    <p>所收集的資料主要用於：</p>
+    <h2>二、資料保留政策</h2>
+    <p>我們將根據以下原則保留您的資料：</p>
     <ul>
-        <li>維護本服務之穩定運作與技術優化。</li>
-        <li>提供技術支援、客戶服務與相關問題之回覆。</li>
-        <li>開發與改善新功能（如自動繞線機之效能調優）。</li>
+        <li><strong>帳號相關資料：</strong> 只要您的帳號處於啟用狀態，我們就會保留該資料。</li>
+        <li><strong>備份資料：</strong> 為了防止系統毀損，資料可能會在備份系統中留存最多 30 天，隨後將被完全覆蓋。</li>
+        <li><strong>法律義務：</strong> 若法律要求（如稅務或合規審查），特定交易紀錄可能需保留更長期限。</li>
     </ul>
 
-    <h2>三、資料保護與安全</h2>
-    <p>我們採取適當的安全措施防止資料遭到未經授權的存取、修改或洩漏。您的資料僅供本專案必要人員接觸，我們絕不會將您的個人資料提供給第三方，除非獲得您的同意或法律另有規定。</p>
+    <div class="highlight-box">
+        <h2>三、帳號刪除與資料刪除權利</h2>
+        <p>使用者可以隨時要求刪除其帳號及相關個人資料。請按照以下步驟操作：</p>
+        <ol>
+            <li><strong>應用程式內操作：</strong> 進入「設定」>「帳號管理」> 點選「刪除帳號」。</li>
+            <li><strong>Email 申請：</strong> 您也可以直接發信至 <a href="mailto:onlymgh1218@gmail.com">onlymgh1218@gmail.com</a>，主旨註明「要求刪除帳號」，我們將在 7 個工作天內移除您的所有個人識別資料。</li>
+        </ol>
+        <p><strong>注意：</strong> 帳號一旦刪除，與該帳號關聯的所有繞線紀錄及設定將永久遺失，且無法恢復。</p>
+    </div>
 
-    <h2>四、對外連結與第三方套件</h2>
-    <p>本服務若包含前往外部網站之連結，該外部網站之隱私權政策與本服務無涉。若本服務使用第三方開源工具或 SDK，其隱私規範將遵循各該套件之宣告。</p>
+    <h2>四、資料安全</h2>
+    <p>我們採用工業標準的加密技術保護您的資料，並防止未經授權的存取。本程式不會將您的個人資訊出售或出租給任何第三方。 </p>
 
-    <h2>五、隱私權政策之修訂</h2>
-    <p>本政策將視需求不定期更新。修正後的條款將直接公告於本頁面，恕不另行個別通知，建議您定期瀏覽本聲明以確保權益。</p>
-
-    <div class="contact-box">
-        <strong>聯絡我們</strong><br>
-        如果您對本隱私權政策有任何疑問，請透過以下信箱與我們聯繫：<br>
-        <a href="mailto:onlymgh1218@gmail.com">onlymgh1218@gmail.com</a>
+    <h2>五、聯絡我們</h2>
+    <div class="contact-info">
+        如果您對本政策或您的資料處理有任何疑問，請聯繫：<br>
+        開發者：鄭名宏<br>
+        電子郵件：<a href="mailto:onlymgh1218@gmail.com">onlymgh1218@gmail.com</a>
     </div>
 
     <div class="footer">
