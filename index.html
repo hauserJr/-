@@ -51,6 +51,11 @@
             border-left: 4px solid var(--primary-color);
             padding-left: 12px;
         }
+        h3 {
+            color: #555;
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
         .highlight-box {
             background-color: #fff9db;
             border: 1px solid #f59f00;
@@ -67,6 +72,25 @@
             padding: 15px;
             border-radius: 8px;
             border-left: 4px solid var(--primary-color);
+        }
+        .permission-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        .permission-table th,
+        .permission-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .permission-table th {
+            background-color: #f1f3f5;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        .permission-table tr:nth-child(even) {
+            background-color: #fafbfc;
         }
         .footer {
             text-align: center;
@@ -92,9 +116,7 @@
         <div class="logo-text">🧶 浮隅 Float Lab</div>
         <h1>隱私權保護政策</h1>
     </div>
-
     <p>本應用程式由 <strong>浮隅 Float Lab</strong>（以下簡稱「本公司」）所開發與營運。我們非常重視您的隱私，特此說明我們的資料處理政策。</p>
-
     <h2>一、個人資料之收集與利用</h2>
     <p>我們僅會收集為提供服務所必需的資訊：</p>
     <ul>
@@ -110,6 +132,71 @@
         <li><strong>操作紀錄：</strong> 應用程式內的使用數據與偏好設定，僅儲存於本地或與您帳號關聯的雲端空間。</li>
     </ul>
 
+    <h2>媒體與相機權限</h2>
+    <p>本應用程式提供與媒體相關的功能，需要存取您的相機和相簿。以下說明我們如何使用這些權限：</p>
+
+    <h3>📱 iOS 應用程式權限</h3>
+    <table class="permission-table">
+        <thead>
+            <tr>
+                <th>權限名稱</th>
+                <th>用途</th>
+                <th>是否必需</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>相機（Camera）</td>
+                <td>用於拍照、記錄編織作品。您可在隱私設定中隨時開啟或禁用此權限。</td>
+                <td>選擇性</td>
+            </tr>
+            <tr>
+                <td>相簿（Photo Library）</td>
+                <td>用於上傳或導入相簿中的照片，展示編織成品、分享作品或製作參考圖庫。您可在隱私設定中選擇允許存取所有相片或限定特定相片。</td>
+                <td>選擇性</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>🤖 Android 應用程式權限</h3>
+    <table class="permission-table">
+        <thead>
+            <tr>
+                <th>權限名稱</th>
+                <th>用途</th>
+                <th>是否必需</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>相機（android.permission.CAMERA）</td>
+                <td>用於拍照、記錄編織作品。您可在應用程式設定或系統設定中隨時撤銷此權限。</td>
+                <td>選擇性</td>
+            </tr>
+            <tr>
+                <td>讀取外部儲存空間（android.permission.READ_EXTERNAL_STORAGE）</td>
+                <td>用於存取您的相簿和照片檔案，導入作品照片或素材。</td>
+                <td>選擇性</td>
+            </tr>
+            <tr>
+                <td>寫入外部儲存空間（android.permission.WRITE_EXTERNAL_STORAGE）</td>
+                <td>用於保存拍攝的照片或編輯後的作品圖檔至您的裝置。</td>
+                <td>選擇性</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>⚙️ 權限管理指南</h3>
+    <ul>
+        <li><strong>iOS 使用者：</strong> 進入「設定」>「隱私」，找到「相機」或「相簿」選項，選擇「浮隅 Float Lab」應用程式，並設定為「允許」、「詢問」或「拒絕」。</li>
+        <li><strong>Android 使用者：</strong> 進入「設定」>「應用程式」>「浮隅 Float Lab」>「權限」，選擇「相機」或「儲存空間」權限，並設定為「允許」、「詢問」或「拒絕」。</li>
+        <li><strong>隨時撤銷：</strong> 您可以隨時在系統設定中撤銷上述任何權限，本應用程式將無法存取相關功能，但不會影響其他服務的正常運作。</li>
+    </ul>
+
+    <div class="highlight-box">
+        <p><strong>重要提示：</strong> 本公司絕不會將您拍攝或上傳的照片用於任何與應用程式功能無關的目的，包括行銷、分析或第三方共享。所有媒體檔案均僅儲存於您的裝置或您的帳號空間內。</p>
+    </div>
+
     <h2>二、資料保留政策</h2>
     <p>我們將根據以下原則保留您的資料：</p>
     <ul>
@@ -117,7 +204,6 @@
         <li><strong>備份資料：</strong> 為了防止系統毀損，資料可能會在備份系統中留存最多 30 天，隨後將被完全覆蓋。</li>
         <li><strong>法律義務：</strong> 若法律要求（如稅務或合規審查），特定交易紀錄可能需保留更長期限。</li>
     </ul>
-
     <div class="highlight-box">
         <h2>三、帳號刪除與資料刪除權利</h2>
         <p>使用者可以隨時要求刪除其帳號及相關個人資料。請按照以下步驟操作：</p>
@@ -127,7 +213,6 @@
         </ol>
         <p><strong>注意：</strong> 帳號一旦刪除，與該帳號關聯的所有數據及設定將永久遺失，且無法恢復。</p>
     </div>
-
     <h2>四、第三方驗證服務條款</h2>
     <p>使用 Apple Sign-in 或 Google Sign-in 登入時，您的操作將受以下條款約束：</p>
     <ul>
@@ -135,13 +220,10 @@
         <li><strong>Google Sign-in：</strong> 請參閱 <a href="https://policies.google.com/privacy" target="_blank">Google 隱私政策</a>。</li>
     </ul>
     <p>本公司不對 Apple 或 Google 的隱私與安全政策負責，但我們承諾不會將您從這些服務獲得的資訊用於任何與登入驗證無關的目的。</p>
-
     <h2>五、資料安全</h2>
     <p>我們採用工業標準的加密技術保護您的資料，並防止未經授權的存取。本公司不會將您的個人資訊出售或出租給任何第三方，亦不會用於任何行銷目的，除非獲得您的明確同意。</p>
-
     <h2>六、資料傳輸與國際轉移</h2>
     <p>若資料需要跨地區傳輸或儲存，我們將採取適當的安全措施，確保您的資料受到保護。</p>
-
     <h2>七、聯絡我們</h2>
     <div class="contact-info">
         <p>如果您對本政策或您的資料處理有任何疑問，歡迎聯繫：</p>
@@ -151,9 +233,8 @@
             <strong>服務時間：</strong> 週一至週五 09:00-18:00
         </p>
     </div>
-
     <div class="footer">
-        最後更新日期：2026年3月13日 | 版本 2.0
+        最後更新日期：2026年3月14日 | 版本 2.1
     </div>
 </div>
 </body>
