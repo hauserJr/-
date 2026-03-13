@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>隱私權保護政策 - 織女日記</title>
+    <title>隱私權保護政策 - 浮隅 Float Lab</title>
     <style>
         :root {
-            --primary-color: #6d5dfc;
+            --primary-color: #8B6F47;
+            --accent-color: #D4A574;
             --bg-color: #f8f9fa;
             --text-color: #2d3436;
         }
@@ -26,8 +27,30 @@
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
-        h1 { color: var(--primary-color); border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        h2 { color: #444; margin-top: 30px; border-left: 4px solid var(--primary-color); padding-left: 12px; }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid var(--primary-color);
+        }
+        .logo-text {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        h1 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            color: #444;
+            margin-top: 30px;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 12px;
+        }
         .highlight-box {
             background-color: #fff9db;
             border: 1px solid #f59f00;
@@ -35,22 +58,56 @@
             border-radius: 8px;
             margin: 20px 0;
         }
-        .contact-info { background: #f1f3f5; padding: 15px; border-radius: 8px; }
-        .footer { text-align: center; margin-top: 40px; font-size: 0.85rem; color: #adb5bd; }
+        .highlight-box h2 {
+            margin-top: 0;
+            border-left: 4px solid #f59f00;
+        }
+        .contact-info {
+            background: #f1f3f5;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.85rem;
+            color: #adb5bd;
+        }
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul, ol {
+            line-height: 2;
+        }
     </style>
 </head>
 <body>
-
 <div class="container">
-    <h1>「織女日記」隱私權保護政策</h1>
-    <p>本應用程式<strong>「織女日記」</strong>（以下簡稱「本程式」）由開發者 <strong>鄭名宏 (Zheng Ming-hong)</strong>（以下簡稱「我們」）所開發與營運。我們非常重視您的隱私，特此說明我們的資料處理政策。</p>
+    <div class="header">
+        <div class="logo-text">🧶 浮隅 Float Lab</div>
+        <h1>隱私權保護政策</h1>
+    </div>
+
+    <p>本應用程式由 <strong>浮隅 Float Lab</strong>（以下簡稱「本公司」）所開發與營運。我們非常重視您的隱私，特此說明我們的資料處理政策。</p>
 
     <h2>一、個人資料之收集與利用</h2>
     <p>我們僅會收集為提供服務所必需的資訊：</p>
     <ul>
-        <li><strong>帳號資訊：</strong> 電子郵件地址（用於登入與身分驗證）。</li>
-        <li><strong>裝置資訊：</strong> 包含硬體型號、作業系統版本，用於優化與 ESP32 控制器的連線穩定性。</li>
-        <li><strong>操作紀錄：</strong> 繞線參數、機器設定等使用數據，僅儲存於本地或與您帳號關聯的雲端空間。</li>
+        <li><strong>帳號資訊：</strong> 電子郵件地址、姓名等基本資訊（用於登入與身分驗證）。</li>
+        <li><strong>第三方驗證：</strong>
+            <ul>
+                <li>若您選擇使用 <strong>Apple Sign-in</strong> 登入，我們將接收 Apple 提供的電子郵件與使用者識別碼，用於帳號管理與身分驗證。</li>
+                <li>若您選擇使用 <strong>Google Sign-in</strong> 登入，我們將接收 Google 提供的電子郵件、名稱與用戶識別碼，用於帳號管理與身分驗證。</li>
+                <li>您可以隨時在手機設定中撤銷本公司對 Apple ID 或 Google 帳號的存取權限。</li>
+            </ul>
+        </li>
+        <li><strong>裝置資訊：</strong> 包含硬體型號、作業系統版本，用於優化與應用程式的連線穩定性與相容性。</li>
+        <li><strong>操作紀錄：</strong> 應用程式內的使用數據與偏好設定，僅儲存於本地或與您帳號關聯的雲端空間。</li>
     </ul>
 
     <h2>二、資料保留政策</h2>
@@ -65,26 +122,39 @@
         <h2>三、帳號刪除與資料刪除權利</h2>
         <p>使用者可以隨時要求刪除其帳號及相關個人資料。請按照以下步驟操作：</p>
         <ol>
-            <li><strong>應用程式內操作：</strong> 進入「設定」>「帳號管理」> 點選「刪除帳號」。</li>
-            <li><strong>Email 申請：</strong> 您也可以直接發信至 <a href="mailto:onlymgh1218@gmail.com">onlymgh1218@gmail.com</a>，主旨註明「要求刪除帳號」，我們將在 7 個工作天內移除您的所有個人識別資料。</li>
+            <li><strong>應用程式內操作：</strong> 進入「設定」> 「帳號管理」> 點選「刪除帳號」。</li>
+            <li><strong>Email 申請：</strong> 您也可以直接發信至 <a href="mailto:service@floatlab.tw">service@floatlab.tw</a>，主旨註明「要求刪除帳號」，我們將在 7 個工作天內移除您的所有個人識別資料。</li>
         </ol>
-        <p><strong>注意：</strong> 帳號一旦刪除，與該帳號關聯的所有繞線紀錄及設定將永久遺失，且無法恢復。</p>
+        <p><strong>注意：</strong> 帳號一旦刪除，與該帳號關聯的所有數據及設定將永久遺失，且無法恢復。</p>
     </div>
 
-    <h2>四、資料安全</h2>
-    <p>我們採用工業標準的加密技術保護您的資料，並防止未經授權的存取。本程式不會將您的個人資訊出售或出租給任何第三方。 </p>
+    <h2>四、第三方驗證服務條款</h2>
+    <p>使用 Apple Sign-in 或 Google Sign-in 登入時，您的操作將受以下條款約束：</p>
+    <ul>
+        <li><strong>Apple Sign-in：</strong> 請參閱 <a href="https://appleid.apple.com/privacy" target="_blank">Apple ID 隱私政策</a>。</li>
+        <li><strong>Google Sign-in：</strong> 請參閱 <a href="https://policies.google.com/privacy" target="_blank">Google 隱私政策</a>。</li>
+    </ul>
+    <p>本公司不對 Apple 或 Google 的隱私與安全政策負責，但我們承諾不會將您從這些服務獲得的資訊用於任何與登入驗證無關的目的。</p>
 
-    <h2>五、聯絡我們</h2>
+    <h2>五、資料安全</h2>
+    <p>我們採用工業標準的加密技術保護您的資料，並防止未經授權的存取。本公司不會將您的個人資訊出售或出租給任何第三方，亦不會用於任何行銷目的，除非獲得您的明確同意。</p>
+
+    <h2>六、資料傳輸與國際轉移</h2>
+    <p>若資料需要跨地區傳輸或儲存，我們將採取適當的安全措施，確保您的資料受到保護。</p>
+
+    <h2>七、聯絡我們</h2>
     <div class="contact-info">
-        如果您對本政策或您的資料處理有任何疑問，請聯繫：<br>
-        開發者：鄭名宏<br>
-        電子郵件：<a href="mailto:onlymgh1218@gmail.com">onlymgh1218@gmail.com</a>
+        <p>如果您對本政策或您的資料處理有任何疑問，歡迎聯繫：</p>
+        <p>
+            <strong>公司名稱：</strong> 浮隅 Float Lab<br>
+            <strong>電子郵件：</strong> <a href="mailto:service@floatlab.tw">service@floatlab.tw</a><br>
+            <strong>服務時間：</strong> 週一至週五 09:00-18:00
+        </p>
     </div>
 
     <div class="footer">
-        最後更新日期：2026年3月10日
+        最後更新日期：2026年3月13日 | 版本 2.0
     </div>
 </div>
-
 </body>
 </html>
