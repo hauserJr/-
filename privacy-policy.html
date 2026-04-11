@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SafeNet 隱私權政策</title>
+  <style>
+    :root {
+      --primary: #E8875B;
+      --primary-light: #FFF3E8;
+      --text: #3E2723;
+      --text-secondary: #795548;
+      --bg: #FFF8F2;
+      --card: #FFFBF7;
+      --border: #EDE7E1;
+      --emergency: #E74C3C;
+      --blue: #3498DB;
+      --green: #6BBF8A;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    header {
+      text-align: center;
+      padding: 48px 0 32px;
+    }
+    header .logo {
+      width: 80px; height: 80px;
+      background: var(--primary-light);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 16px;
+      font-size: 40px;
+    }
+    header h1 {
+      font-size: 28px;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+    header p.subtitle {
+      color: var(--text-secondary);
+      font-size: 14px;
+    }
+    .update-date {
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 14px;
+      margin-bottom: 32px;
+      padding: 8px 16px;
+      background: var(--primary-light);
+      border-radius: 20px;
+      display: inline-block;
+    }
+    .center { text-align: center; }
+
+    h2 {
+      font-size: 20px;
+      color: var(--primary);
+      margin: 40px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--primary-light);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    h2 .icon {
+      width: 32px; height: 32px;
+      background: var(--primary-light);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    h3 {
+      font-size: 17px;
+      color: var(--text);
+      margin: 20px 0 8px;
+    }
+    p { margin-bottom: 12px; }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin: 16px 0;
+    }
+    .card-warning {
+      background: #FFF8E1;
+      border-color: #FFE082;
+    }
+    .card-danger {
+      background: #FDEDED;
+      border-color: #F5C6CB;
+    }
+    .card-info {
+      background: #EBF5FB;
+      border-color: #AED6F1;
+    }
+    .card-green {
+      background: #E8F5E9;
+      border-color: #A5D6A7;
+    }
+
+    ul, ol {
+      margin: 8px 0 16px 24px;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 15px;
+    }
+    table th {
+      background: var(--primary);
+      color: white;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 600;
+    }
+    table th:first-child { border-radius: 8px 0 0 0; }
+    table th:last-child { border-radius: 0 8px 0 0; }
+    table td {
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    table tr:nth-child(even) td {
+      background: var(--primary-light);
+    }
+    table tr:last-child td:first-child { border-radius: 0 0 0 8px; }
+    table tr:last-child td:last-child { border-radius: 0 0 8px 0; }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .badge-required {
+      background: #FDEDED;
+      color: var(--emergency);
+    }
+    .badge-optional {
+      background: #EBF5FB;
+      color: var(--blue);
+    }
+
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin: 16px 0;
+    }
+    .rights-grid .right-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+    }
+    .rights-grid .right-item .right-icon {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+    .rights-grid .right-item h4 {
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+    .rights-grid .right-item p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+
+    .contact-box {
+      background: linear-gradient(135deg, var(--primary-light), #FFF8F2);
+      border: 2px solid var(--primary);
+      border-radius: 16px;
+      padding: 24px;
+      text-align: center;
+      margin: 32px 0;
+    }
+    .contact-box h3 {
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+    .contact-box a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .contact-box a:hover { text-decoration: underline; }
+
+    footer {
+      text-align: center;
+      padding: 32px 0;
+      color: var(--text-secondary);
+      font-size: 13px;
+      border-top: 1px solid var(--border);
+      margin-top: 40px;
+    }
+
+    .lang-switcher {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin: 16px 0 0;
+    }
+    .lang-switcher a {
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      text-decoration: none;
+      color: var(--text-secondary);
+      border: 1px solid var(--border);
+      transition: all 0.2s;
+    }
+    .lang-switcher a.active,
+    .lang-switcher a:hover {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    @media (max-width: 600px) {
+      .container { padding: 24px 16px 60px; }
+      header { padding: 32px 0 24px; }
+      header h1 { font-size: 24px; }
+      h2 { font-size: 18px; }
+      table { font-size: 13px; }
+      table th, table td { padding: 8px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <div class="logo">&#x1F49D;</div>
+    <h1>SafeNet 隱私權政策</h1>
+    <p class="subtitle">Privacy Policy</p>
+    <div class="lang-switcher">
+      <a href="#" class="active" onclick="switchLang('zhTW')">繁體中文</a>
+      <a href="#" onclick="switchLang('zhCN')">简体中文</a>
+      <a href="#" onclick="switchLang('en')">English</a>
+    </div>
+  </header>
+
+  <div class="center">
+    <span class="update-date">最後更新日期：2026 年 4 月 11 日</span>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- 1. 概述 -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <h2><span class="icon">&#x1F4CB;</span> 一、概述</h2>
+  <p>SafeNet（以下簡稱「本應用程式」）是一款無償互助求救平台，旨在幫助使用者在需要時發送求救訊號，並讓附近的善心人士能夠前往協助。</p>
+  <p>我們深知您的隱私至關重要。本隱私權政策說明我們如何收集、使用、儲存及保護您的個人資料，並告知您依據相關法律所享有的權利。</p>
+
+  <div class="card">
+    <strong>適用範圍：</strong>本政策適用於 SafeNet 在 iOS（Apple App Store）及 Android（Google Play Store）平台上發布的所有版本。
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- 2. 收集的資料 -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <h2><span class="icon">&#x1F4E6;</span> 二、我們收集的資料</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>資料類別</th>
+        <th>具體項目</th>
+        <th>必要性</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>帳號資料</strong></td>
+        <td>顯示名稱、電子郵件、大頭貼網址（來自第三方登入提供者）</td>
+        <td><span class="badge badge-required">必要</span></td>
+      </tr>
+      <tr>
+        <td><strong>身分識別</strong></td>
+        <td>系統內部唯一編號（如 #000001）、使用者 UUID</td>
+        <td><span class="badge badge-required">必要</span></td>
+      </tr>
+      <tr>
+        <td><strong>位置資料</strong></td>
+        <td>GPS 經緯度座標（包含前景與背景定位）</td>
+        <td><span class="badge badge-required">必要</span></td>
+      </tr>
+      <tr>
+        <td><strong>網路資料</strong></td>
+        <td>發布求救時的公開 IP 位址</td>
+        <td><span class="badge badge-required">必要</span></td>
+      </tr>
+      <tr>
+        <td><strong>裝置資料</strong></td>
+        <td>FCM 推播 Token、裝置平台類型（iOS/Android）</td>
+        <td><span class="badge badge-required">必要</span></td>
+      </tr>
+      <tr>
+        <td><strong>使用紀錄</strong></td>
+        <td>求救類型、備註內容、發布時間、狀態</td>
+        <td><span class="badge badge-required">必要</span></td>
+      </tr>
+      <tr>
+        <td><strong>偏好設定</strong></td>
+        <td>語言偏好、是否已閱讀使用說明</td>
+        <td><span class="badge badge-optional">選用</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="card card-info">
+    <strong>&#x2139;&#xFE0F; 我們不收集的資料：</strong>
+    <ul>
+      <li>通訊錄 / 聯絡人</li>
+      <li>簡訊、通話紀錄</li>
+      <li>照片、影片、檔案</li>
+      <li>瀏覽器歷史紀錄</li>
+      <li>信用卡或金融資訊</li>
+      <li>生物辨識資料（指紋、面部）</li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- 3. 位置資料 (GPS) -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <h2><span class="icon">&#x1F4CD;</span> 三、位置資料（GPS）使用說明</h2>
+
+  <div class="card card-warning">
+    <strong>&#x26A0;&#xFE0F; 重要說明：本應用程式會在背景持續取得您的 GPS 位置。</strong>
+  </div>
+
+  <h3>為什麼需要位置資料？</h3>
+  <ul>
+    <li><strong>發布求救訊號：</strong>將您的位置標註在地圖上，讓附近的人能找到您。</li>
+    <li><strong>顯示附近求救：</strong>在地圖上顯示您周圍的求救標記，讓您可以前往幫助他人。</li>
+    <li><strong>緊急求救定位：</strong>在緊急情況下即時提供您的位置，提高救援效率。</li>
+  </ul>
+
+  <h3>前景定位與背景定位</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>定位模式</th>
+        <th>說明</th>
+        <th>使用時機</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>前景定位</strong></td>
+        <td>App 開啟使用中時取得位置</td>
+        <td>瀏覽地圖、發布求救</td>
+      </tr>
+      <tr>
+        <td><strong>背景定位</strong></td>
+        <td>App 在背景或螢幕關閉時持續取得位置</td>
+        <td>持續更新您的位置以便他人在緊急情況下找到您</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>您的控制權</h3>
+  <ul>
+    <li>您可以隨時在裝置設定中將定位權限改為「使用期間」或「永不」。</li>
+    <li>拒絕背景定位不影響基本功能，但可能降低緊急求救時的定位準確度。</li>
+    <li>iOS：設定 → 隱私權與安全性 → 定位服務 → SafeNet</li>
+    <li>Android：設定 → 應用程式 → SafeNet → 權限 → 位置</li>
+  </ul>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- 4. 推播通知 (FCM) -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <h2><span class="icon">&#x1F514;</span> 四、推播通知</h2>
+
+  <p>本應用程式使用 <strong>Firebase Cloud Messaging（FCM）</strong>發送推播通知。</p>
+
+  <h3>通知用途</h3>
+  <ul>
+    <li><strong>緊急求救通知：</strong>當您附近有人發送緊急求救時，立即通知您。</li>
+    <li><strong>一般求救通知：</strong>當您附近有人發送一般求救時通知您。</li>
+    <li><strong>狀態更新：</strong>您發布的求救請求被回應或狀態變更時通知您。</li>
+  </ul>
+
+  <h3>技術說明</h3>
+  <ul>
+    <li>我們會在您的裝置上產生一組 <strong>FCM Token</strong>，用於定向發送通知。</li>
+    <li>此 Token 與您的帳號關聯，儲存在我們的伺服器中。</li>
+    <li>登出時，Token 將從伺服器移除。</li>
+  </ul>
+
+  <div class="card">
+    <strong>如何關閉通知：</strong>
+    <ul>
+      <li>iOS：設定 → 通知 → SafeNet → 關閉「允許通知」</li>
+      <li>Android：設定 → 應用程式 → SafeNet → 通知 → 關閉</li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- 5. 第三方登入 -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <h2><span class="icon">&#x1F511;</span> 五、第三方登入服務</h2>
+
+  <p>SafeNet 使用以下第三方身分驗證服務，我們僅取得必要的基本資料：</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>登入方式</th>
+        <th>取得的資料</th>
+        <th>對方的隱私政策</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Apple 登入</strong></td>
+        <td>姓名（可隱藏）、電子郵件（可使用隱藏信箱）</td>
+        <td><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple 隱私權政策</a></td>
+      </tr>
+      <tr>
+        <td><strong>Google 登入</strong></td>
+        <td>姓名、電子郵件、大頭貼網址</td>
+        <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隱私權政策</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="card card-info">
+    <strong>&#x2139;&#xFE0F; 說明：</strong>我們不會取得您在這些平台上的密碼，也不會代您發文或存取您的社交資料。
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- 6. 資料用途 -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <h2><span class="icon">&#x1F3AF;</span> 六、資料使用目的</h2>
+
+  <ul>
+    <li><strong>提供核心服務：</strong>發布與顯示求救訊號、地圖定位、推播通知。</li>
+    <li><strong>帳號管理：</strong>建立與維護您的帳號、記錄偏好設定。</li>
+    <li><strong>安全與防濫用：</strong>記錄 IP 位址與時間，防止惡意濫用求救功能。</li>
+    <li><strong>服務改善：</strong>分析匿名化的使用趨勢以改善應用程式體驗。</li>
+  </ul>
+
+  <div class="card card-danger">
+    <strong>&#x1F6AB; 我們絕不會：</strong>
+    <ul>
+      <li>將您的個人資料出售給第三方</li>
+      <li>將位置資料用於廣告投放</li>
+      <li>未經同意向第三方分享您的可識別資料</li>
+      <li>對您的資料進行自動化決策或行為分析</li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- 7. 資料儲存與安全 -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <h2><span class="icon">&#x1F512;</span> 七、資料儲存與安全</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>項目</th>
+        <th>說明</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>儲存位置</strong></td>
+        <td>Supabase 雲端資料庫（基於 PostgreSQL），伺服器位於受保護的資料中心</td>
+      </tr>
+      <tr>
+        <td><strong>傳輸加密</strong></td>
+        <td>所有資料透過 HTTPS/TLS 加密傳輸</td>
+      </tr>
+      <tr>
+        <td><strong>存取控制</strong></td>
+        <td>採用 Row Level Security（RLS），使用者僅能存取自己的資料</td>
+      </tr>
+      <tr>
+        <td><strong>求救紀錄保留</strong></td>
+        <td>活躍的求救訊號於 24 小時後自動過期</td>
+      </tr>
+      <tr>
+        <td><strong>FCM Token</strong></td>
+        <td>登出時自動從伺服器移除</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- 8. 您的權利 -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <h2><span class="icon">&#x2696;&#xFE0F;</span> 八、您的權利</h2>
+
+  <p>依據個人資料保護相關法規（包括但不限於台灣《個人資料保護法》、歐盟 GDPR、美國 CCPA），您享有以下權利：</p>
+
+  <div class="rights-grid">
+    <div class="right-item">
+      <div class="right-icon">&#x1F441;</div>
+      <h4>查閱權</h4>
+      <p>查看我們持有的您的個人資料</p>
+    </div>
+    <div class="right-item">
+      <div class="right-icon">&#x270F;&#xFE0F;</div>
+      <h4>更正權</h4>
+      <p>要求更正不正確的個人資料</p>
+    </div>
+    <div class="right-item">
+      <div class="right-icon">&#x1F5D1;&#xFE0F;</div>
+      <h4>刪除權</h4>
+      <p>要求刪除您的帳號及所有相關資料</p>
+    </div>
+    <div class="right-item">
+      <div class="right-icon">&#x1F4E4;</div>
+      <h4>資料可攜權</h4>
+      <p>要求匯出您的個人資料</p>
+    </div>
+    <div class="right-item">
+      <div class="right-icon">&#x1F6D1;</div>
+      <h4>撤回同意權</h4>
+      <p>隨時撤回您對資料處理的同意</p>
+    </div>
+    <div class="right-item">
+      <div class="right-icon">&#x1F6AB;</div>
+      <h4>限制處理權</h4>
+      <p>限制我們處理您的資料</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- 9. 刪除帳號 -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <h2><span class="icon">&#x1F5D1;&#xFE0F;</span> 九、帳號刪除與資料清除</h2>
+
+  <div class="card card-danger">
+    <strong>&#x26A0;&#xFE0F; 帳號刪除為不可逆操作。</strong>
+    <p style="margin-top:8px;">一旦刪除，以下所有資料將被<strong>永久清除且無法復原</strong>。</p>
+  </div>
+
+  <h3>如何刪除帳號</h3>
+  <p>在應用程式內操作：<strong>設定頁面 → 刪除帳號 → 確認刪除</strong></p>
+
+  <h3>刪除時清除的資料</h3>
+  <ul>
+    <li>&#x2705; 個人檔案（姓名、電子郵件、大頭貼）</li>
+    <li>&#x2705; 所有求救發布紀錄（包含備註、位置、IP 紀錄）</li>
+    <li>&#x2705; FCM 推播 Token</li>
+    <li>&#x2705; 偏好設定與語言選擇</li>
+    <li>&#x2705; 系統內部帳號編號</li>
+    <li>&#x2705; 身分驗證資料</li>
+  </ul>
+
+  <h3>處理時間</h3>
+  <p>帳號刪除請求將<strong>立即執行</strong>。所有資料將在操作完成後從資料庫中永久移除。</p>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- 10. 兒童隱私 -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <h2><span class="icon">&#x1F476;</span> 十、兒童隱私保護</h2>
+
+  <p>本應用程式不針對 13 歲以下兒童提供服務。我們不會故意收集 13 歲以下兒童的個人資料。如果您是家長或監護人，並發現您的孩子在未經同意的情況下向我們提供了個人資料，請與我們聯繫，我們將立即刪除相關資料。</p>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- 11. Cookie -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <h2><span class="icon">&#x1F36A;</span> 十一、Cookie 與追蹤技術</h2>
+
+  <p>本應用程式<strong>不使用</strong> Cookie、廣告追蹤碼或第三方分析工具。我們僅使用以下技術：</p>
+  <ul>
+    <li><strong>Supabase Auth Token：</strong>用於維持登入狀態的安全 Token。</li>
+    <li><strong>SharedPreferences / UserDefaults：</strong>在裝置本地儲存語言偏好設定。</li>
+    <li><strong>Firebase Cloud Messaging：</strong>僅用於推播通知功能。</li>
+  </ul>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- 12. 政策變更 -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <h2><span class="icon">&#x1F4DD;</span> 十二、隱私權政策變更</h2>
+
+  <p>我們可能會不定期更新本隱私權政策。當政策發生重大變更時：</p>
+  <ul>
+    <li>我們將透過應用程式內推播通知告知您。</li>
+    <li>更新後的政策將在本頁面公布，並更新「最後更新日期」。</li>
+    <li>繼續使用本應用程式即表示您同意更新後的隱私權政策。</li>
+  </ul>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- 13. 聯繫方式 -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <h2><span class="icon">&#x1F4EC;</span> 十三、聯繫我們</h2>
+
+  <p>如果您對本隱私權政策有任何疑問，或希望行使您的資料權利，請透過以下方式聯繫我們：</p>
+
+  <div class="contact-box">
+    <h3>&#x1F49D; SafeNet 隱私權聯繫窗口</h3>
+    <p>
+      電子郵件：<a href="mailto:onlyzmg1993@gmail.com">onlyzmg1993@gmail.com</a><br>
+      回覆時間：收到請求後 <strong>30 個工作天內</strong>回覆
+    </p>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- 14. 適用法律 -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <h2><span class="icon">&#x1F3DB;&#xFE0F;</span> 十四、適用法律</h2>
+
+  <p>本隱私權政策依據中華民國（台灣）法律制定與解釋。如有任何爭議，以台灣法院為第一審管轄法院。</p>
+
+  <div class="card card-green">
+    <strong>&#x1F4DA; 合規聲明：</strong>
+    <p style="margin-top: 8px; margin-bottom: 0;">本隱私權政策符合以下規範要求：</p>
+    <ul style="margin-bottom: 0;">
+      <li>Apple App Store 審查指南 §5.1（隱私權）</li>
+      <li>Google Play 使用者資料政策</li>
+      <li>台灣《個人資料保護法》</li>
+      <li>歐盟一般資料保護規範（GDPR）之基本原則</li>
+      <li>加州消費者隱私保護法（CCPA）之基本原則</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 SafeNet. All rights reserved.</p>
+    <p>本隱私權政策最後更新於 2026 年 4 月 11 日。</p>
+  </footer>
+
+</div>
+
+<script>
+  // Simple language switcher placeholder
+  function switchLang(lang) {
+    // In production, this would load different language versions
+    // For now, highlight the active language
+    document.querySelectorAll('.lang-switcher a').forEach(a => a.classList.remove('active'));
+    event.target.classList.add('active');
+
+    if (lang === 'en') {
+      alert('English version coming soon.\nThe English privacy policy will be available in a future update.');
+    } else if (lang === 'zhCN') {
+      alert('简体中文版本即将推出。\n简体中文隐私权政策将在未来更新中提供。');
+    }
+  }
+</script>
+
+</body>
+</html>
